@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHREK.MY WEATHER.COM</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SHREK.MY WEATHER.COM</h1>
+            <div class="search-container">
+                <input type="text" id="city-search" placeholder="Search for a city..." autocomplete="off">
+                <button id="search-btn">Search</button>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="today">Today</button>
+            <button class="tab-btn" data-tab="forecast">5-day forecast</button>
+        </nav>
+
+        <div id="error-message">
+            <p id="error-text"></p>
+            <p>Please enter a different location.</p>
+        </div>
+
+        <main>
+    
+            <div id="today-tab" class="tab-content active">
+                <div class="weather-card current-weather">
+                    <div class="weather-main">
+                        <h2 id="current-city">Loading...</h2>
+                        <div class="weather-icon">
+                            <img id="current-icon" src="" alt="Weather icon">
+                            <div id="current-description"></div>
+                        </div>
+                        <div class="temperature">
+                            <span id="current-temp"></span>
+                        </div>
+                        <div id="current-feels-like"></div>
+                    </div>
+                    <div class="weather-details">
+                        <div><span>Humidity: </span><span id="humidity"></span></div>
+                        <div><span>Wind: </span><span id="wind"></span></div>
+                        <div><span>Pressure: </span><span id="pressure"></span></div>
+                        <div><span>Visibility: </span><span id="visibility"></span></div>
+                        <div><span>Sunrise: </span><span id="sunrise"></span></div>
+                        <div><span>Sunset: </span><span id="sunset"></span></div>
+                    </div>
+                </div>
+
+                <div class="weather-card">
+                    <h3>Popular Cities</h3>
+                    <div class="popular-cities">
+                        <div class="city-card" data-city="London">
+                            <h4>London</h4>
+                            <div class="city-weather">
+                                <img class="city-icon" src="" alt="">
+                                <div class="city-temp"></div>
+                            </div>
+                        </div>
+                        <div class="city-card" data-city="New York">
+                            <h4>New York</h4>
+                            <div class="city-weather">
+                                <img class="city-icon" src="" alt="">
+                                <div class="city-temp"></div>
+                            </div>
+                        </div>
+                        <div class="city-card" data-city="Tokyo">
+                            <h4>Tokyo</h4>
+                            <div class="city-weather">
+                                <img class="city-icon" src="" alt="">
+                                <div class="city-temp"></div>
+                            </div>
+                        </div>
+                        <div class="city-card" data-city="Paris">
+                            <h4>Paris</h4>
+                            <div class="city-weather">
+                                <img class="city-icon" src="" alt="">
+                                <div class="city-temp"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div id="forecast-tab" class="tab-content">
+                <div class="weather-card">
+                    <h3>5-Day Forecast</h3>
+                    <div class="daily-forecast-container" id="daily-forecast">
+                  
+                    </div>
+                </div>
+                
+                <div class="weather-card forecast-details" id="forecast-details">
+                
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
